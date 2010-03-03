@@ -41,7 +41,7 @@ class DanAudioThread extends Thread {
 		// tell scsynth where we're expecting synthdefs (and plugins? not yet settled on the best way to handle plugins)
 		//File dataDir = Environment.getDataDirectory();
 		//String dataDirStr = dataDir.toString();
-		String dataDirStr = "/sdcard/supercollider";
+		String dataDirStr = Environment.getExternalStorageDirectory().toString() + "/supercollider";
 		String dataDirStrPlgs = dataDirStr + "/plugins";
 		String dataDirStrDefs = dataDirStr + "/synthdefs";
 		Log.i("GlastoCollider1", "DanAudioThread - data dir is " + dataDirStr);
